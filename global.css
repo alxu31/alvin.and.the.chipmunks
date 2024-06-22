@@ -1,19 +1,25 @@
 
-
+/*! Default stuff */
 * {
     margin: 0;
     text-align: center;
 }
 
+html {
+    height: 100vh;
+}
+
 body {
     display: flex;
-    width: 100%;
     height: 100%;
+    width: 100%;
     overflow: hidden;
+    background: pink;
 }
 
 #alex, #jack, #jeuno {
-    height: 100vh;
+    position: relative;
+    height: 100%;
     flex: 1;
     min-width: 300px;
     margin: 0 5px 0 5px;
@@ -33,39 +39,109 @@ body {
     background: #2267fd;
 }
 
-.j1 {
-    font-family: 'Montserrat';
-}
-
 h1 {
-    margin: 10px;
+    font-family: "Merriweather", serif;
+    font-style: italic;
     font-size: 3rem;
     /* text-shadow: 0 0 5px black, 0 -5px 5px black; */
 
 }
 
-.content {
-    width: 100%;
-    height: 100%;
-}
-
+/*! Alex stuff */
 img {
     margin: 10px;
-    width: 60%;
+    width: 70%;
     border-radius: 25px;
     border: 4px solid black;
 }
 
-li, .links {
+ul {
+    list-style-type: circle;
+}
+
+li {
     margin-left: 20%;
     text-align: left;
-    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    color: black;
 }
 
 h2 {
     margin-top: 5px;
 }
 
+.links {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+}
+
+#post {
+    display: flex;
+    justify-content: center;
+    width: 8px;
+    height: 100%;
+    background: #562b00;
+}
+
+.sign {
+    text-align: center;
+    position: relative;
+    top: 10px;
+    height: 40px;
+    clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0% 100%, 10% 50%, 0% 0%);
+    animation: 5s infinite running shakeSlow;
+}
+
+#signhead {
+    background: #633200;
+    font-size: 1.5rem;
+    padding: 0 20px 0 24px;
+    border: none;
+    height: 100%;
+    font-family: "Oleo Script", system-ui;
+    color: #ffffa9;
+}
+
+@keyframes shakeSlow {
+    50% {
+        transform: rotateZ(5deg);
+    }
+    0%, 100% {
+        transform: rotateZ(-5deg);
+    }
+}
+
+#grass1, #grass2 {
+    position: absolute;
+    bottom: -12px;
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+}
+
+#grass1 {
+    border-bottom: 40px solid #138510;
+    border-right: 5px solid transparent;
+    transform: rotateZ(-60deg);
+    margin-right: 30px;
+}
+
+#grass2 {
+    border-bottom: 40px solid #117c13;
+    border-right: 10px solid transparent;
+    transform: rotateZ(45deg);
+    margin-left: 20px;
+}
+
+/*! jeuno stuff */
+.j1 {
+    font-family: 'Montserrat';
+}
 a {
     color: white;
 }
